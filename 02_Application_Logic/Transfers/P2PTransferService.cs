@@ -13,6 +13,6 @@ public class P2PTransferService {
         }
 
         // The "Handshake": Move digital AI$ while recording the physical asset backup
-        return await _repo.TransactAsync(sender, receiver, amount);
+        return await _ops.TransactAsync(sender, receiver, amount);
     }
 }
