@@ -5,8 +5,22 @@ namespace GlobalBank.Domain.Interfaces
 {
     public interface IBankingRepository
     {
-        Account GetAccountById(Guid id);
-        Task SaveTransactionAsync(Transaction transaction);
-        Task UpdateAccountAsync(Account account);
+        Task<Account?> GetAccountByIdAsync(Guid id);
+
+        Task InsertLedgerEntryAsync(
+            Guid accountId,
+            decimal credit,
+            decimal debit,
+            string description,
+            string? physicalAssetRef = null
+        );
+
+        Task RegisterPhysicalAssetAsync(
+            PhysicalAssetDeposit asset,
+            Guid targetAccountId
+        );
+
+        Task<decimal> GetLedgerTotalAsync();
+        Task<decimal> GetPhysicalVaultTotalAsync();
     }
 }
