@@ -1,4 +1,9 @@
 // Filepath: fintechs-exhibitu/02_Application_Logic/Services/CapitalRegistrationService.cs
+using GlobalBank.Domain.Interfaces;
+using GlobalBank.Domain.Entities;
+
+namespace GlobalBank.Application.Services;
+
 public class CapitalRegistrationService 
 {
     private readonly IBankingRepository _repo;
