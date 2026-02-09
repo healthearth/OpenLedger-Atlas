@@ -4,15 +4,25 @@ using GlobalBank.Domain.Interfaces;
 namespace GlobalBank.Application.Transfers;
 
 public class P2PTransferService {
-    private readonly IBankingRepository _repo;
-    private readonly AMLMonitor _aml;
 
-    public async Task<bool> ExecuteTransferAsync(Guid sender, Guid receiver, decimal amount) {
-        if (_aml.IsSuspicious(amount, "AI$")) {
-            throw new Exception("Compliance Hold: Transaction exceeds safety limits.");
-        }
+    // 1. Injected dependencies
+    private readonly IBankingOperations _ops;
+    private readonly IAmlService _aml;
 
-        // The "Handshake": Move digital AI$ while recording the physical asset backup
-        return await _ops.TransactAsync(sender, receiver, amount);
+    // 2. The private constructor - injects the dependencies here
+    public P2PTransferService(IBankingOperations ops, IAmlService aml)
+    {
+        _ops = ops;
+        _aml = aml;
+    }
+
+    // 3. Methods
+    public async Task<bool> TransferAsync(Guidfrom, Guid to, decimal amount)
+    {
+        // AML check
+        if (!await _aml.IsTransferAllowedAsync(from, to, amount))
+
+        // Banking operation, "the handshake"
+        return await _ops.TransactAsync(from, to, amount));
     }
 }
