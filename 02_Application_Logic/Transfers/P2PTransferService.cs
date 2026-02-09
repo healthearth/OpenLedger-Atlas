@@ -1,4 +1,8 @@
 // Filepath: fintechs-exhibitu/02_Application_Logic/Transfers/P2PTransferService.cs
+using GlobalBank.Domain.INterfaces;
+
+namespace GlobalBank.Application.Transfers;
+
 public class P2PTransferService {
     private readonly IBankingRepository _repo;
     private readonly AMLMonitor _aml;
