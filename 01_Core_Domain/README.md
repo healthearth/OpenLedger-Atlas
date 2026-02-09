@@ -1,1 +1,1 @@
-# The heart and rules of the bank
+The heart and rules of the bank
