@@ -2,13 +2,13 @@
 namespace GlobalBank.Domain.Entities;
 
 public class Transaction {
-    public Guid Id { get; private set; } = Guid.NewGuid();
-    public Guid FromAccountId { get; private set; }
-    public Guid ToAccountId { get; private set; }
-    public decimal Amount { get; private set; }
-    public string CurrencyCode { get; private set; }
-    public string PhysicalAssetReference { get; private set; } // Link to specific library asset
-    public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public Guid FromAccountId { get; set; }
+    public Guid ToAccountId { get; set; }
+    public decimal Amount { get; set; }
+    public string CurrencyCode { get; set; }
+    public string PhysicalAssetReference { get; set; } // Link to specific library asset
+    public DateTime TimestampUtc { get; set; }
 
     public Transaction(Guid from, Guid to, decimal amount, string currency, string assetRef) {
         if (amount <= 0) throw new ArgumentException("Amount must be positive.");
