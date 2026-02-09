@@ -2,7 +2,7 @@
 using GlobalBank.Domain.Entities;
 using GlobalBank.Domain.Interfaces;
 
-namespace GlobalBank.Application.Banking
+namespace GlobalBank.Domain.Interfaces
 {
     public class BankingOperations : IBankingOperations
     {
