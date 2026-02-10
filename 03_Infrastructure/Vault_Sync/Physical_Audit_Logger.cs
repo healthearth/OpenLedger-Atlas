@@ -4,7 +4,7 @@ using GlobalBank.Domain.ValueObjects;
 using GlobalBank.Infrastructure.Persistence; 
 using Microsoft.EntityFrameworkCore;
 
-namespace GlobalBank.Infrastructure.Vault;
+namespace GlobalBank.Infrastructure.Vault_Sync;
 
 public class PhysicalAuditLogger 
 {
@@ -42,6 +42,7 @@ public class PhysicalAuditLogger
         
         await _db.SaveChangesAsync();
 
-        return AuditResult.WithDiscrepancy(discrepancy < 0 ? Math.Abs(discrepancy(log.IsCompliant, discrepancy) : 0m);
+        // 4. Return value-object audit result
+        return new AuditResult.WithDiscrepancy(discrepancy < 0 ? Math.Abs(discrepancy(log.IsCompliant, discrepancy) : 0m);
     }
 }
