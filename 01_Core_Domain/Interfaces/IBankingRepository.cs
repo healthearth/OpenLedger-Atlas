@@ -1,4 +1,5 @@
 // Filepath: fintechs-exhibitu/01_Core_Domain/Interfaces/IBankingRepository.cs
+
 using System;
 using System.Threading.Tasks;
 using GlobalBank.Domain.Entities;
