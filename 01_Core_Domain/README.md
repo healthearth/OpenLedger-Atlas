@@ -1,3 +1,5 @@
+© 2026 Andrew Kieckhefer. All rights reserved.
+
 🫀 The heart and rules of the bank
 
 # Summary 
