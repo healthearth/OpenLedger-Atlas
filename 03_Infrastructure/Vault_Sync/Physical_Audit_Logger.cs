@@ -1,5 +1,8 @@
 // Filepath: fintechs-exhibitu/03_Infrastructure/Vault/Physical_Audit_Logger.cs
 using GlobalBank.Domain.Entities;
+using GlobalBank.Domain.ValueObjects; 
+using GlobalBank.Infrastructure.Persistence; 
+using Microsoft.EntityFrameworkCore;
 
 namespace GlobalBank.Infrastructure.Vault;
 
@@ -19,13 +22,14 @@ public class PhysicalAuditLogger
     public async Task<AuditResult> PerformVaultReconciliationAsync(decimal actualPhysicalCash)
     {
         // 1. Get total Digital AI$ in circulation from SQL
-        decimal totalDigitalCirculation = await _db.Accounts.SumAsync(a => a.DigitalBalance);
+        decimal totalDigitalCirculation = await _db.Accounts.SumAsync(a => a.Balance);
 
         // 2. Calculate Discrepancy
         decimal discrepancy = actualPhysicalCash - totalDigitalCirculation;
 
         var log = new VaultAuditLog
         {
+            Id = Guid.NewGuid(),
             Timestamp = DateTime.UtcNow,
             DigitalTotal = totalDigitalCirculation,
             PhysicalTotal = actualPhysicalCash,
@@ -36,8 +40,8 @@ public class PhysicalAuditLogger
         // 3. Write to an IMMUTABLE audit table (Legal requirement)
         _db.AuditLogs.Add(log);
         
-        await _db.Accounts.SumAsync(a => a.Balance);
+        await _db.SaveChangesAsync();
 
-        return new AuditResult(log.IsCompliant, discrepancy);
+        return AuditResult.WithDiscrepancy(discrepancy < 0 ? Math.Abs(discrepancy(log.IsCompliant, discrepancy) : 0m);
     }
 }
