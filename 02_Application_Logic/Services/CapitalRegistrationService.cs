@@ -22,9 +22,9 @@ public class CapitalRegistrationService
         foreach (var asset in assets)
         {
             // 1. Convert physical currency to AI$ equivalent
-            decimal aiValue = ExchangeEngine.Convert(asset.FaceValue, asset.CurrencyCode);
+            decimal aiValue = ExchangeEngine.ConvertToAiDollar(
                 asset.FaceValue,
-                asset.CurrencyCode;
+                asset.CurrencyCode);
 
             // 2. Register the physical asset in the vault
             await _repo.RegisterPhysicalAssetAsync(asset, targetAccountId);
