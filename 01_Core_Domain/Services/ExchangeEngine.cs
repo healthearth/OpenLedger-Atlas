@@ -1,4 +1,6 @@
 // fintechs-exhibitu/01_Core_Domain/Services/ExchangeEngine.cs
+// © 2026 Andrew Kieckhefer. All rights reserved.
+
 namespace GlobalBank.Domain.Services;
 
 public static class ExchangeEngine
