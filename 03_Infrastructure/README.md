@@ -1,3 +1,5 @@
+© 2026 Andrew Kieckhefer. All rights reserved.
+
 # Summary
 
 // Filepath: fintechs-exhibitu/03_Infrastructure/Persistence/SqlBankingRepository.cs
