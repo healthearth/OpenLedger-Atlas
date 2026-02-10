@@ -1,4 +1,5 @@
 // Filepath: fintechs-exhibitu/03_Infrastructure/Persistence/SqlBankingRepository.cs
+// © 2026 Andrew Kieckhefer. All rights reserved.
 
 using Dapper;
 using Microsoft.Data.SqlClient;
