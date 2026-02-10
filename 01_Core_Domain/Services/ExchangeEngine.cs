@@ -4,5 +4,5 @@ namespace GlobalBank.Domain.Services;
 public static class ExchangeEngine
 {
     public static decimal Convert(decimal amount, string currencyCode)
-        => amount; // placeholder
+        => amount; // placeholder until real FX logic
 }
