@@ -1,4 +1,5 @@
 // fintechs-exhibitu/02_Application_Logic/Banking/BankingOperations.cs
+// © 2026 Andrew Kieckhefer. All rights reserved.
 
 using GlobalBank.Domain.Interfaces;
 
