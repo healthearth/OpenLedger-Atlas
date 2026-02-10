@@ -1,4 +1,7 @@
 // fintechs-exhibitu/fintechsiexhibitu.csproj
+<RootNamespace>fintechs-Exhibitu</RootNamespace>
+<RootNamespace>GlobalBank</RootNamespace>
+
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
