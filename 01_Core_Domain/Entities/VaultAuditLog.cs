@@ -4,7 +4,9 @@ namespace GlobalBank.Domain.Entities;
 public class VaultAuditLog
 {
     public Guid Id { get; set; }
-    public decimal LedgerTotal { get; set; }
+    public DateTime Timestamp { get; set; }
+    public decimal DigitalTotal { get; set; }
     public decimal PhysicalTotal { get; set; }
-    public DateTime LoggedAtUtc { get; set; }
+    public decimal Discrepancy { get; set; }
+    public bool IsCompliant { get; set; }
 }
