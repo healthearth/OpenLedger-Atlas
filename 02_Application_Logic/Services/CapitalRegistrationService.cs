@@ -34,7 +34,7 @@ public class CapitalRegistrationService
             // 3. Create the ledger entry
             await _repo.InsertLedgerEntryAsync(
                 accountId: targetAccountId,
-                credit: aiValue,
+                credit: OSBValue,
                 debit: 0m,
                 description: $"Startup Capital: {asset.CurrencyCode} Serial {asset.SerialNumber}",
                 physicalAssetRef: asset.SerialNumber);
