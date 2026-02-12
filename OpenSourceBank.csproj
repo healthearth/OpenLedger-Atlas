@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
-<!-- fintechs-exhibitu/fintechsiexhibitu.csproj -->
+<!-- OpenSourceBank/OpenSourceBank.csproj -->
 <!-- © 2026 Andrew Kieckhefer. All rights reserved. -->
 
   <!-- Project metadata -->
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>net10.0</TargetFramework>
-    <RootNamespace>fintechs_Exhibitu</RootNamespace>
+    <RootNamespace>OpenSourceBank</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
