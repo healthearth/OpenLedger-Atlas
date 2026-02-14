@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OpenLedger Atlas</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>OpenLedger Internal Dashboard</title>
 </head>
 <body>
-  <header>
-    <h1>OpenLedger Atlas</h1>
-    <p>Enterprise FinTech Simulation Platform</p>
-  </header>
+  <h1>Internal Metrics</h1>
 
-  <section>
-    <h2>Live Metrics</h2>
-    <div id="metrics"></div>
-  </section>
+  <button onclick="loadMetrics()">Refresh</button>
 
-  <section>
-    <h2>Liquidity Forecast</h2>
-    <canvas id="forecastChart"></canvas>
-  </section>
+  <pre id="metrics"></pre>
 
-  <script src="app.js"></script>
+  <script>
+    async function loadMetrics() {
+      const response = await fetch("http://localhost:5000/api/metrics");
+      const data = await response.json();
+      document.getElementById("metrics").innerText =
+        JSON.stringify(data, null, 2);
+    }
+  </script>
 </body>
 </html>
