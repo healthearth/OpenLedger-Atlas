@@ -32,3 +32,11 @@ public class AuthController : ControllerBase
         return Ok(new { token });
     }
 }
+
+[HttpPost("login")]
+public IActionResult Login(LoginRequest request)
+{
+    var token = _tokenService.Generate(request.Email);
+    return Ok(new { token });
+}
+
