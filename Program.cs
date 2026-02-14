@@ -19,3 +19,12 @@ if (args.Contains("--fraudburst"))
     Console.WriteLine("Fraud spike triggered.");
     return;
 }
+
+if (args.Contains("--reconcile"))
+{
+    var reconcile = scope.ServiceProvider.GetRequiredService<ReconciliationService>();
+    reconcile.Run();
+
+    Console.WriteLine("Reconciliation complete.");
+    return;
+}
