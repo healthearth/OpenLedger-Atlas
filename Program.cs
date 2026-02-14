@@ -8,3 +8,14 @@ if (args.Contains("--simulate"))
     Console.WriteLine("Generated 10,000 transactions.");
     return;
 }
+
+if (args.Contains("--fraudburst"))
+{
+    using var scope = app.Services.CreateScope();
+    var fraud = scope.ServiceProvider.GetRequiredService<FraudScenarioGenerator>();
+
+    await fraud.TriggerBurstAsync(500);
+
+    Console.WriteLine("Fraud spike triggered.");
+    return;
+}
