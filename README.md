@@ -86,6 +86,24 @@ OpenLedger-Atlas/
 │               
 ├── 08_Forecasting/        
 │   └── CashflowForecastService.cs  
+|
+├── 09_Observability/        
+│   ├── frontend-dashboard/            
+│   │   ├── index.html
+│   │   ├── styles.css
+│   │   └── app.js
+│   ├── docker/            
+│   │   ├── Docker
+│   │   └── docker-compose.yml
+│   ├── .github/            
+│   │   └── workflows
+│   ├── docs/            
+│   │   ├── 
+│   │   
+│   └── MetricsServices.cs/            
+   
+
+
 
 # OpenLedger Platform
 
