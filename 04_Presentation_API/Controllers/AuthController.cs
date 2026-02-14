@@ -1,42 +1,40 @@
 //
-[ApiController]
-[Route("api/auth")]
-public class AuthController : ControllerBase
+using Microsoft.AspNetCore.Mvc;
+
+namespace OpenLedgerAtlas.Presentation.Controllers
 {
-    private readonly AuthService _auth;
-    private readonly TokenService _token;
-
-    public AuthController(AuthService auth, TokenService token)
+    [ApiController]
+    [Route("api/auth")]
+    public class AuthController : ControllerBase
     {
-        _auth = auth;
-        _token = token;
-    }
+        private readonly AuthService _auth;
+        private readonly TokenService _token;
 
-    [HttpPost("register")]
-    public async Task<IActionResult> Register(LoginRequest request)
-    {
-        var user = await _auth.Register(request.Email, request.Password);
-        return Ok(user.Id);
-    }
+        public AuthController(AuthService auth, TokenService token)
+        {
+            _auth = auth;
+            _token = token;
+        }
 
-    [HttpPost("login")]
-    public async Task<IActionResult> Login(LoginRequest request)
-    {
-        var user = await _auth.Validate(request.Email, request.Password);
+        [HttpPost("register")]
+        public async Task<IActionResult> Register(RegisterRequest request)
+        {
+            var user = await _auth.Register(request.Email, request.Password);
 
-        if (user == null)
-            return Unauthorized();
+            return Ok(new { user.Id, user.Email });
+        }
 
-        var token = _token.Generate(user.Email);
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginRequest request)
+        {
+            var user = await _auth.Validate(request.Email, request.Password);
 
-        return Ok(new { token });
+            if (user == null)
+                return Unauthorized("Invalid credentials");
+
+            var token = _token.Generate(user.Email);
+
+            return Ok(new { token });
+        }
     }
 }
-
-[HttpPost("login")]
-public IActionResult Login(LoginRequest request)
-{
-    var token = _tokenService.Generate(request.Email);
-    return Ok(new { token });
-}
-
