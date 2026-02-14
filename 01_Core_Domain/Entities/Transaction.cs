@@ -10,7 +10,7 @@ public class Transaction {
     public decimal Amount { get; set; }
     public string CurrencyCode { get; set; }
     public string PhysicalAssetReference { get; set; } // Link to specific library asset
-    public DateTime TimestampUtc { get; set; }
+    public DateTime TimestampCreatedAtUtc { get; set; }
 
     public Transaction(Guid from, Guid to, decimal amount, string currency, string assetRef) {
         if (amount <= 0) throw new ArgumentException("Amount must be positive.");
