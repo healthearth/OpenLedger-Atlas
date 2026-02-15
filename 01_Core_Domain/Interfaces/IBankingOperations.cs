@@ -1,7 +1,7 @@
 // -- filepath fintechs-exhibitu/01_Core_Domain/Interfaces/IBankingOperations.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-namespace GlobalBank.Domain.Interfaces;
+namespace OpenLLedgerAtlas.Domain.Interfaces;
 
 public interface IBankingOperations
 {
