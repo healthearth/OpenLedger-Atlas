@@ -18,11 +18,10 @@ namespace OpenLedgerAtlas.Application.Services
             var from = await _db.Accounts.FirstAsync(a => a.UserId == fromUserId);
             var to = await _db.Accounts.FirstAsync(a => a.UserId == toUserId);
 
-            if (from.Balance < amount)
+            if (!from.Debit(amount))
                 return false;
 
-            from.Balance -= amount;
-            to.Balance += amount;
+            to.Credit(amount);
 
             _db.Transactions.Add(new Transaction
             {
