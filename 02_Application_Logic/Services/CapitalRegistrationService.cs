@@ -1,11 +1,11 @@
 // Filepath: fintechs-exhibitu/02_Application_Logic/Services/CapitalRegistrationService.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-using GlobalBank.Domain.Interfaces;
-using GlobalBank.Domain.Entities;
-using GlobalBank.Domain.Services;
+using OpenLedgerAtlas.Domain.Interfaces;
+using OpenLedgerAtlas.Domain.Entities;
+using OpenLedgerAtlas.Domain.Services;
 
-namespace GlobalBank.Application.Services;
+namespace OpenLedgerAtlas.Application.Services;
 
 public class CapitalRegistrationService
 {
