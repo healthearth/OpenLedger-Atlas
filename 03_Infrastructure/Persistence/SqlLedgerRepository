@@ -3,9 +3,9 @@
 
 using System.Data;
 using Dapper;
-using GlobalBank.Domain.Entities;
+using OpenLedgerAtlas.Domain.Entities;
 
-namespace GlobalBank.Infrastructure.Persistence;
+namespace OpenLedgerAtlas.Infrastructure.Persistence;
 
 public class SqlLedgerRepository
 {
