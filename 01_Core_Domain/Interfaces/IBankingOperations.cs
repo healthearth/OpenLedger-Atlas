@@ -1,7 +1,7 @@
 // -- filepath fintechs-exhibitu/01_Core_Domain/Interfaces/IBankingOperations.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-namespace OpenLLedgerAtlas.Domain.Interfaces;
+namespace OpenLedgerAtlas.Domain.Interfaces;
 
 public interface IBankingOperations
 {
