@@ -1,7 +1,7 @@
 // Filepath: fintechs-exhibitu/01_Core_Domain/ValueObjects/AuditResult.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-namespace GlobalBank.Domain.ValueObjects;
+namespace OpenLedgerAtlas.Domain.ValueObjects;
 
 public record AuditResult(bool IsCompliant, decimal Discrepancy)
 {
