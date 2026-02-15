@@ -1,10 +1,10 @@
 // Filepath: fintechs-exhibitu/03_Infrastructure/Persistence/SqlLedgerContext.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-using GlobalBank.Domain.Entities;
+using OpenLedgerAtlas.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace GlobalBank.Infrastructure.Persistence;
+namespace OpenLedgerAtlas.Infrastructure.Persistence;
 
 public class SqlLedgerContext : DbContext { 
     public DbSet<Account> Accounts { get; set; } = null!; 
