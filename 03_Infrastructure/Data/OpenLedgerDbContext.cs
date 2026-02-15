@@ -11,7 +11,8 @@ namespace OpenLedgerAtlas.Infrastructure.Data
         public DbSet<User> Users => Set<User>();
         public DbSet<Account> Accounts => Set<Account>();
         public DbSet<Transaction> Transactions => Set<Transaction>();
-        public DbSet<ExchangeRate> ExchangeRates => Set<ExchangeRate>();    }
+        public DbSet<ExchangeRate> ExchangeRates => Set<ExchangeRate>(); 
 
+        }
     }
 }
