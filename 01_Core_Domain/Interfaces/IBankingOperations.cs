@@ -7,4 +7,6 @@ public interface IBankingOperations
 {
     Task<bool> TransactAsync(Guid senderId, Guid receiverId, decimal amount);
     Task<bool> ReconcileWithPhysicalVaultAsync();
+    Task<List<Guid>> GetAllAccountIdsAsync();
+
 }
