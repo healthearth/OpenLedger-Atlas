@@ -8,4 +8,7 @@ public class User
     public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
 
     public List<Account> Accounts { get; set; } = new();
+
+    public bool IsActive { get; set; } = true;
+
 }
