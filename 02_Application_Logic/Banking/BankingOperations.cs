@@ -39,4 +39,13 @@ public class BankingOperations : IBankingOperations
 
         return ledger == vault;
     }
+
+    public async Task<List<Guid>> GetAllAccountIdsAsync()
+    {
+    return await _db.Accounts
+        .Select(a => a.Id)
+        .ToListAsync();
+    }
+}
+
 }
