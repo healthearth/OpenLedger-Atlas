@@ -1,5 +1,6 @@
-//
 using Microsoft.AspNetCore.Mvc;
+using OpenSourceBank.Application.Services;   // adjust if needed
+using OpenSourceBank.Application.DTOs;      // adjust if needed
 
 namespace OpenLedgerAtlas.Presentation.Controllers
 {
@@ -17,11 +18,10 @@ namespace OpenLedgerAtlas.Presentation.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterRequest request)
+        public async Task<IActionResult> Register(LoginRequest request)
         {
             var user = await _auth.Register(request.Email, request.Password);
-
-            return Ok(new { user.Id, user.Email });
+            return Ok(user.Id);
         }
 
         [HttpPost("login")]
@@ -30,7 +30,7 @@ namespace OpenLedgerAtlas.Presentation.Controllers
             var user = await _auth.Validate(request.Email, request.Password);
 
             if (user == null)
-                return Unauthorized("Invalid credentials");
+                return Unauthorized();
 
             var token = _token.Generate(user.Email);
 
