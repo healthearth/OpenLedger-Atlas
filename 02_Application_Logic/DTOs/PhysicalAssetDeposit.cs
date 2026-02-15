@@ -1,7 +1,7 @@
 // Filepath: fintechs-exhibitu/02_Application_Logic/DTOs/PhysicalAssetDeposit.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-namespace GlobalBank.Application.DTOs;
+namespace OpenLedgerAtlas.Application.DTOs;
 
 public record PhysicalAssetDeposit(
     string SerialNumber, 
