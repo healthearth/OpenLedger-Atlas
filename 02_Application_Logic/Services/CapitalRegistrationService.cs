@@ -3,7 +3,6 @@
 
 using OpenLedgerAtlas.Domain.Interfaces;
 using OpenLedgerAtlas.Domain.Entities;
-using OpenLedgerAtlas.Domain.Services;
 
 namespace OpenLedgerAtlas.Application.Services;
 
