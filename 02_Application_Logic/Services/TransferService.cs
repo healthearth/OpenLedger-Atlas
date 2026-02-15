@@ -1,5 +1,8 @@
 //
 using OpenLedgerAtlas.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace OpenLedgerAtlas.Application.Services
 
 public class TransferService
 {
