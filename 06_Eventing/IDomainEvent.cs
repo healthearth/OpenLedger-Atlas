@@ -1,6 +1,6 @@
 //
 // 06_Eventing/IDomainEvent.cs
-namespace GlobalBank.Eventing;
+namespace OpenLedgerAtlas.Eventing;
 
 public interface IDomainEvent
 {
