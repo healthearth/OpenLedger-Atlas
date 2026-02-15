@@ -1,4 +1,6 @@
 //
+namespace OpenLedgerAtlas.Simulation_Engine;
+
 public class TransactionSimulator
 {
     private readonly IBankingOperations _ops;
