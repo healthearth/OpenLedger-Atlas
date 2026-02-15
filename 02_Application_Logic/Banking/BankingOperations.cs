@@ -1,6 +1,5 @@
 // fintechs-exhibitu/02_Application_Logic/Banking/BankingOperations.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
-
 using OpenLedgerAtlas.Domain.Interfaces;
 using OpenLedgerAtlas.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
