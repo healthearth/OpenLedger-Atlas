@@ -1,9 +1,9 @@
 // Filepath: fintechs-exhibitu/02_Application_Logic/Transfers/P2PTransferService.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-using GlobalBank.Domain.Interfaces;
+using OpenLedgerAtlas.Domain.Interfaces;
 
-namespace GlobalBank.Application.Transfers;
+namespace OpenLedgerAtlas.Application.Transfers;
 
 public class P2PTransferService
 {
