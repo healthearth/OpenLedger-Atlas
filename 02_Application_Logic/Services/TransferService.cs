@@ -23,13 +23,16 @@ namespace OpenLedgerAtlas.Application.Services
 
             to.Credit(amount);
 
-            _db.Transactions.Add(new Transaction
-            {
-                FromAccountId = from.Id,
-                ToAccountId = to.Id,
-                Amount = amount
-            });
-
+            _db.Transactions.Add(
+                new Transaction(
+                    from.Id,
+                    to.Id,
+                    amount,
+                    "Transfer",
+                    "Completed"
+                )
+            );
+            
             await _db.SaveChangesAsync();
             return true;
         }
