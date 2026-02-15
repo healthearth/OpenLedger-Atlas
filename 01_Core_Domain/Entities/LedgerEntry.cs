@@ -1,7 +1,7 @@
 // Filepath: fintechs-exhibitu/01_Core_Domain/Entities/LedgerEntry.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-namespace GlobalBank.Domain.Entities;
+namespace OpenLedgerAtlas.Domain.Entities;
     
 public class LedgerEntry 
 {
