@@ -1,6 +1,6 @@
 //
 // 06_Eventing/SimpleEventBus.cs
-namespace GlobalBank.Eventing;
+namespace OpenLedgerAtlas.Eventing;
 
 public class SimpleEventBus
 {
