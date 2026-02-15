@@ -1,7 +1,6 @@
 // Filepath: fintechs-exhibitu/02_Application_Logic/Services/CapitalRegistrationService.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 using OpenLedgerAtlas.Domain.Services;
-
 using OpenLedgerAtlas.Domain.Interfaces;
 using OpenLedgerAtlas.Domain.Entities;
 
