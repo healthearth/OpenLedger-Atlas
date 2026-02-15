@@ -3,10 +3,10 @@
 
 using Dapper;
 using Microsoft.Data.SqlClient;
-using GlobalBank.Domain.Entities;
-using GlobalBank.Domain.Interfaces;
+using OpenLedgerAtlas.Domain.Entities;
+using OpenLedgerAtlas.Domain.Interfaces;
 
-namespace GlobalBank.Infrastructure.Persistence;
+namespace OpenLedgerAtlas.Infrastructure.Persistence;
 
 public class SqlBankingRepository : IBankingRepository
 {
