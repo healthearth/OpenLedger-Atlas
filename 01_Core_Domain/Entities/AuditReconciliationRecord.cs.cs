@@ -1,7 +1,7 @@
 // fintechs-exhibitu/01_Core_Domain/Entities/AuditReconciliationRecord.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-namespace GlobalBank.Domain.Entities;
+namespace OpenLedgerAtlas.Domain.Entities;
 
 public class AuditReconciliationRecord //Former AuditResult.cs interference
 {
