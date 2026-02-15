@@ -2,8 +2,9 @@ using OpenLedgerAtlas.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace OpenLedgerAtlas.Observability
+namespace OpenLedgerAtlas.Application.Services
 {
-    public class MetricsService
+    public class MetricsServices
     {
         private readonly OpenLedgerDbContext _context;
     
