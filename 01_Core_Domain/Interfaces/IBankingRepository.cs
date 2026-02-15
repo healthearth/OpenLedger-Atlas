@@ -3,9 +3,9 @@
 
 using System;
 using System.Threading.Tasks;
-using GlobalBank.Domain.Entities;
+using OpenLedgerAtlas.Domain.Entities;
 
-namespace GlobalBank.Domain.Interfaces
+namespace OpenLedgerAtlas.Domain.Interfaces
 {
     public interface IBankingRepository
     {
