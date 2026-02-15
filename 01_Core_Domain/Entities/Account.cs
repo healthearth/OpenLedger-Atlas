@@ -5,32 +5,36 @@ namespace GlobalBank.Domain.Entities;
 
 public class Account
 {
-    public Guid Id { get; private set; } = Guid.NewGuid();
-    public Guid UserId { get; set; }
-    public User User { get; set; } = null!;
-    public string OwnerName { get; private set; }
-    public string CurrencyCode { get; private set; } = "USD";
-    public bool IsKycVerified { get; private set; }
+    public Guid Id { get; set; }
 
-    // Optional: remove Balance entirely if ledger-derived
+    public Guid UserId { get; set; }
+
     public decimal Balance { get; private set; }
 
-    public Account(string owner, string currency)
+    public Account(Guid userId)
     {
-        Id = Guid.NewGuid();
-        OwnerName = owner;
-        CurrencyCode = currency;
+        UserId = userId;
         Balance = 0m;
     }
 
-    public void MarkKycVerified()
-    {
-        IsKycVerified = true;
-    }
-
-    // Optional: controlled balance mutation
-    public void ApplyDelta(decimal amount)
+    public void Credit(decimal amount)
     {
         Balance += amount;
     }
+
+    public bool Debit(decimal amount)
+    {
+        if (Balance < amount)
+            return false;
+
+        Balance -= amount;
+        return true;
+    }
 }
+
+// Optional: controlled balance mutation
+public void ApplyDelta(decimal amount)
+{
+    Balance += amount;
+}
+
