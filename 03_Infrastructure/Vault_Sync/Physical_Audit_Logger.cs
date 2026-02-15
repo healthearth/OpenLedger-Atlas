@@ -22,7 +22,7 @@ public class PhysicalAuditLogger
     /// Compares physical vault inventory against digital liabilities.
     /// This is the "Truth Check" for the AI$.
     /// </summary>
-    public async Task<GlobalBank.Domain.ValueObjects.AuditResult> PerformVaultReconciliationAsync(decimal actualPhysicalCash)
+    public async Task<OpenLedgerAtlas.Domain.ValueObjects.AuditResult> PerformVaultReconciliationAsync(decimal actualPhysicalCash)
     {
         // 1. Get total Digital AI$ in circulation from SQL
         decimal totalDigitalCirculation = await _db.Accounts.SumAsync(a => a.Balance);
