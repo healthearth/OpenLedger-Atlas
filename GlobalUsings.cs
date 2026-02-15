@@ -4,5 +4,5 @@
 global using System;
 global using System.Threading.Tasks;
 
-global using GlobalBank.Domain.Entities;
-global using GlobalBank.Domain.Interfaces;
+global using OpenLedgerAtlas.Domain.Entities;
+global using OpenLedgerAtlas.Domain.Interfaces;
