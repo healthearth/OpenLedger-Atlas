@@ -1,5 +1,5 @@
 //
-using OpenSourceBank.Infrastructure.Data;
+using OpenLedgerAtlas.Infrastructure.Data;
 
 public class TransferService
 {
