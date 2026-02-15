@@ -1,9 +1,9 @@
 // fintechs-exhibitu/02_Application_Logic/Banking/BankingOperations.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-using GlobalBank.Domain.Interfaces;
+using OpenLedgerAtlas.Domain.Interfaces;
 
-namespace GlobalBank.Application.Banking;
+namespace OpenLedgerAtlas.Application.Banking;
 
 public class BankingOperations : IBankingOperations
 {
