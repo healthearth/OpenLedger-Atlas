@@ -16,6 +16,8 @@ public class Transaction
     public string Status { get; private set; }
 
     public DateTime CreatedAt { get; private set; }
+    public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+    public bool IsFraud { get; set; }
 
     public Transaction(
         Guid from,
