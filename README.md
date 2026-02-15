@@ -33,7 +33,12 @@ OpenLedger-Atlas/
 │   │   └── TokenService.cs
 │   ├── Compliance/             # AMLMonitor.cs (Flags >$10k transactions)
 │   └── DTOs/                   # Data Transfer Objects (Secure data packets)
-│
+|         ├── LoginRequest.cs
+|         ├── PhysicalAssetDeposit.cs
+|         ├── TransactionHistoryDto.cs
+|         ├── AccountSummary.cs
+|         └── PaymentRequest.cs
+|
 ├── 03_Infrastructure/          # THE ARMS: External Vendors
 │   ├── Data/
 │   │   ├── OpenLedgerDbContext.cs
