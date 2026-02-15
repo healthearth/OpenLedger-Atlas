@@ -1,7 +1,7 @@
-// Filepath: fintechs-exhibitu/01_Core_Domain/Entities/Account.cs
+// Filepath: OpenLedger-Atlas/01_Core_Domain/Entities/Account.cs
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
-namespace GlobalBank.Domain.Entities;
+namespace OpenLedgerAtlas.Domain.Entities;
 
 public class Account
 {
@@ -30,11 +30,9 @@ public class Account
         Balance -= amount;
         return true;
     }
-}
 
-// Optional: controlled balance mutation
-public void ApplyDelta(decimal amount)
-{
-    Balance += amount;
+    public void ApplyDelta(decimal amount)
+    {
+        Balance += amount;
+    }
 }
-
