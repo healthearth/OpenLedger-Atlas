@@ -2,12 +2,12 @@
 // © 2026 Andrew Kieckhefer. All rights reserved.
 
 // using GlobalBank.Domain.Entities;
-using GlobalBank.Domain.ValueObjects; 
+using OpenLedgerAtlas.Domain.ValueObjects; 
 // using AuditResult = GlobalBank.Domain.ValueObjects.AuditResult;
-using GlobalBank.Infrastructure.Persistence; 
+using OpenLedgerAtlas.Infrastructure.Persistence; 
 using Microsoft.EntityFrameworkCore;
 
-namespace GlobalBank.Infrastructure.Vault_Sync;
+namespace OpenLedgerAtlas.Infrastructure.Vault_Sync;
 
 public class PhysicalAuditLogger 
 {
