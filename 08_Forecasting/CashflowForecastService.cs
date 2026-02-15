@@ -1,4 +1,6 @@
 //
+namespace OpenLedgerAtlas.Forecasting;
+
 public class CashflowForecastService
 {
     public List<decimal> Forecast(
