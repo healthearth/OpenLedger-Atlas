@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using OpenLedgerAtlas.Domain.Entities;
 using OpenLedgerAtlas.Infrastructure.Data;
 
 namespace OpenLedgerAtlas.Application.Services
@@ -23,12 +24,10 @@ namespace OpenLedgerAtlas.Application.Services
             };
 
             _db.Users.Add(user);
+            await _db.SaveChangesAsync();
 
-            var account = new Account
-            {
-                User = user,
-                Balance = 1000m
-            };
+            var account = new Account(user.Id);
+            account.Credit(1000m);
 
             _db.Accounts.Add(account);
             await _db.SaveChangesAsync();
@@ -51,4 +50,3 @@ namespace OpenLedgerAtlas.Application.Services
         }
     }
 }
-
