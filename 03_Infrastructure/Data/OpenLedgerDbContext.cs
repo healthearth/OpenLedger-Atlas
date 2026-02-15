@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace OpenSourceBank.Infrastructure.Data
+namespace OpenLedgerAtlas.Infrastructure.Data
 {
     public class OpenLedgerDbContext : DbContext
     {
