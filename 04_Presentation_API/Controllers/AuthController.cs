@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using OpenSourceBank.Application.Services;   // adjust if needed
-using OpenSourceBank.Application.DTOs;      // adjust if needed
+using OpenLedgerAtlas.Application.Services;   // adjust if needed
+using OpenLedgerAtlas.Application.DTOs;      // adjust if needed
 
-namespace OpenSourceBank.Presentation.Controllers
+namespace OpenLedgerAtlas.Presentation.Controllers
 {
     [ApiController]
     [Route("api/auth")]
