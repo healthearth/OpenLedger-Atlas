@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using OpenLedgerAtlas.Domain.Entities;
 
 namespace OpenLedgerAtlas.Infrastructure.Data
 {
