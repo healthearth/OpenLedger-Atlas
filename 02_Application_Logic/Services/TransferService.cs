@@ -1,4 +1,6 @@
 //
+using OpenSourceBank.Infrastructure.Data;
+
 public class TransferService
 {
     private readonly OpenLedgerDbContext _db;
