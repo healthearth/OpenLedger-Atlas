@@ -28,3 +28,5 @@ if (args.Contains("--reconcile"))
     Console.WriteLine("Reconciliation complete.");
     return;
 }
+
+app.Run();
