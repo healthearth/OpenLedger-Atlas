@@ -1,4 +1,4 @@
-namespace OpenSourceBank.Application.DTOs
+namespace OpenLedgerAtlas.Application.DTOs
 {
     public class LoginRequest
     {
