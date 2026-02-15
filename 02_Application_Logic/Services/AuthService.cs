@@ -1,46 +1,54 @@
-//
-public class AuthService
+using Microsoft.EntityFrameworkCore;
+using OpenLedgerAtlas.Infrastructure.Data;
+
+namespace OpenLedgerAtlas.Application.Services
 {
-    private readonly OpenLedgerDbContext _db;
-
-    public AuthService(OpenLedgerDbContext db)
+    public class AuthService
     {
-        _db = db;
-    }
+        private readonly OpenLedgerDbContext _db;
 
-    public async Task<User> Register(string email, string password)
-    {
-        var hash = BCrypt.Net.BCrypt.HashPassword(password);
-
-        var user = new User
+        public AuthService(OpenLedgerDbContext db)
         {
-            Email = email,
-            PasswordHash = hash
-        };
+            _db = db;
+        }
 
-        _db.Users.Add(user);
-
-        var account = new Account
+        public async Task<User> Register(string email, string password)
         {
-            User = user,
-            Balance = 1000m
-        };
+            var hash = BCrypt.Net.BCrypt.HashPassword(password);
 
-        _db.Accounts.Add(account);
-        await _db.SaveChangesAsync();
+            var user = new User
+            {
+                Email = email,
+                PasswordHash = hash
+            };
 
-        return user;
-    }
+            _db.Users.Add(user);
 
-    public async Task<User?> Validate(string email, string password)
-    {
-        var user = await _db.Users.FirstOrDefaultAsync(x => x.Email == email);
+            var account = new Account
+            {
+                User = user,
+                Balance = 1000m
+            };
 
-        if (user == null) return null;
+            _db.Accounts.Add(account);
+            await _db.SaveChangesAsync();
 
-        if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
-            return null;
+            return user;
+        }
 
-        return user;
+        public async Task<User?> Validate(string email, string password)
+        {
+            var user = await _db.Users
+                .FirstOrDefaultAsync(x => x.Email == email);
+
+            if (user == null)
+                return null;
+
+            if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+                return null;
+
+            return user;
+        }
     }
 }
+
