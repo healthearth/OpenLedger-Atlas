@@ -1,22 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>OpenLedger Internal Dashboard</title>
+    <meta charset="UTF-8">
+    <title>OpenLedgerAtlas – Internal Metrics</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Internal Metrics</h1>
 
-  <button onclick="loadMetrics()">Refresh</button>
+    <header>
+        <h1>OpenLedgerAtlas – Internal Metrics Dashboard</h1>
+        <button id="refreshBtn">Refresh</button>
+    </header>
 
-  <pre id="metrics"></pre>
+    <section id="metrics">
+        <div class="metric">
+            <h2>Transactions Today</h2>
+            <p id="txCount">0</p>
+        </div>
+        <div class="metric">
+            <h2>Fraud Alerts</h2>
+            <p id="fraudCount">0</p>
+        </div>
+        <div class="metric">
+            <h2>Active Accounts</h2>
+            <p id="accountCount">0</p>
+        </div>
+        <div class="metric">
+            <h2>Settlement Queue</h2>
+            <p id="settlementCount">0</p>
+        </div>
+    </section>
 
-  <script>
-    async function loadMetrics() {
-      const response = await fetch("http://localhost:5000/api/metrics");
-      const data = await response.json();
-      document.getElementById("metrics").innerText =
-        JSON.stringify(data, null, 2);
-    }
-  </script>
+    <section id="chart">
+        <h2>Transactions Per Minute</h2>
+        <div id="chartPlaceholder">[Chart Placeholder]</div>
+    </section>
+
+    <section id="logs">
+        <h2>Recent Events</h2>
+        <div id="logStream"></div>
+    </section>
+
+    <footer>
+        <p id="timestamp">Last updated: never</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
