@@ -31,3 +31,4 @@ public async Task TriggerBurstAsync(int count)
         await _ops.TransactAsync(from, to, amount);
     }
 }
+}
