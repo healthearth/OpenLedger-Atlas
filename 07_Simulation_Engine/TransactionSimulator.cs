@@ -10,6 +10,12 @@ public class TransactionSimulator
         List<Guid> accounts,
         int volume = 10000)
     {
+        if (accounts ==null || accounts.Count == 0)
+        {
+            Console.WriteLine("Not publicly available at this time.");
+            return;
+        }
+        
         for (int i = 0; i < volume; i++)
         {
             var from = accounts[_rng.Next(accounts.Count)];
