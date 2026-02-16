@@ -21,4 +21,5 @@ async function loadGitHubStats() {
 }
 
 loadMetrics();
-
+loadGithubStats();
+setInterval(loadGithubStats, 60000); // every minute refresh
