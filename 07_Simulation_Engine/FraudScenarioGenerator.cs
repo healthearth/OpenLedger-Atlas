@@ -28,7 +28,7 @@ public class FraudScenarioGenerator
             decimal amount = Math.Round(
                 (decimal)_rng.NextDouble() * 10000m, 2);
 
-            await _ops.TransactAsync(from, to, amount, isFraudulent: true);
+            await _ops.TransactAsync(from, to, amount);
         }
     }
 }
