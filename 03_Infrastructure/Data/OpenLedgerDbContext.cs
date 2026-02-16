@@ -13,6 +13,6 @@ namespace OpenLedgerAtlas.Infrastructure.Data
         public DbSet<Transaction> Transactions => Set<Transaction>();
         public DbSet<ExchangeRate> ExchangeRates => Set<ExchangeRate>(); 
 
-        }
+        
     }
 }
