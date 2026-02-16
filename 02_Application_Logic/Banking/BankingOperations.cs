@@ -4,7 +4,7 @@ using OpenLedgerAtlas.Domain.Interfaces;
 using OpenLedgerAtlas.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace OpenLedgerAtlas.Application.Banking;
+namespace OpenLedgerAtlas.ApplicationLogic.Banking;
 
 public class BankingOperations : IBankingOperations
 {
