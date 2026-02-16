@@ -1,5 +1,5 @@
 # OpenLedger (Atlas)
-My crack at a payment processing community for creators.
+A collaborative crack at a payment processing community hosted by me...
 
 ![AndrewsHarryPotterMondayForecast](https://github.com/user-attachments/assets/e0135414-85d8-4bb5-9e75-9e9c59ed0753)
 
@@ -9,8 +9,17 @@ My crack at a payment processing community for creators.
 
 > Double-entry ledger first financial platform is born with audit logs built in
 
+<img width="932" height="97" alt="BuildSuccessIsolated021526" src="https://github.com/user-attachments/assets/0072432e-1df9-4f65-b14f-9cd26f810bd3" />
 
+> dotnet build is a success
 
+<img width="771" height="121" alt="dotnetrunapplicationstarted021526" src="https://github.com/user-attachments/assets/eac93f77-e3a8-4237-be85-0396a6e74f21" />
+
+> dotnet run is a success
+
+<img width="942" height="393" alt="dotnetrunsimulate" src="https://github.com/user-attachments/assets/265f7fa9-e3ac-45b7-a792-98254a8133a0" />
+
+> dotnet run --simulate is a success
 
 OpenLedger-Atlas/
 ├── 01_Core_Domain/             # THE HEART: Rules of the Bank
