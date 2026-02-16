@@ -18,7 +18,8 @@ builder.Services.AddDbContext<OpenLedgerDbContext>(options =>
 builder.Services.AddScoped<TransferService>();
 builder.Services.AddScoped<CapitalRegistrationService>();
 builder.Services.AddScoped<MerchantSettlementService>();
-builder.Services.AddScoped<ReconciliationService>();   // ← NEW LINE
+builder.Services.AddScoped<ReconciliationService>();   
+builder.Services.AddScoped<IBankingOperations, BankingOperations>(); // ← NEW LINE
 
 // --------------------------------------------
 // 3. Register Simulation / Engine Services
