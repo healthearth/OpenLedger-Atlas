@@ -18,13 +18,13 @@ builder.Services.AddDbContext<OpenLedgerDbContext>(options =>
 builder.Services.AddScoped<TransferService>();
 builder.Services.AddScoped<CapitalRegistrationService>();
 builder.Services.AddScoped<MerchantSettlementService>();
+builder.Services.AddScoped<ReconciliationService>();   // ← NEW LINE
 
 // --------------------------------------------
 // 3. Register Simulation / Engine Services
 // --------------------------------------------
 builder.Services.AddScoped<TransactionSimulator>();
 builder.Services.AddScoped<FraudScenarioGenerator>();
-builder.Services.AddScoped<ReconciliationService>();
 
 // --------------------------------------------
 // 4. Add Controllers / API
@@ -71,4 +71,3 @@ if (args.Contains("--reconcile"))
 // --------------------------------------------
 app.MapControllers();
 app.Run();
-
